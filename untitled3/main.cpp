@@ -22,10 +22,10 @@ public:
             age = inAge;
         }
     }
-    Dog () : Dog("Snow", std::make_shared<Toy>("SomeToy"), 0) {};
-    Dog(std::string inName, int inAge) : Dog(inName, std::make_shared<Toy>("SomeToy"), inAge) {};
-    Dog (std::string inName) : Dog(inName, std::make_shared<Toy>("SomeToy"), 0) {};
-    Dog (int inAge) : Dog ("Snow", std::make_shared<Toy>("SomeToy"), inAge) {};
+    Dog () : Dog("Snow", std::make_shared<Toy>(), 0) {};
+    Dog(std::string inName, int inAge) : Dog(inName, std::make_shared<Toy>(), inAge) {};
+    Dog (std::string inName) : Dog(inName, std::make_shared<Toy>(), 0) {};
+    Dog (int inAge) : Dog ("Snow", std::make_shared<Toy>(), inAge) {};
 
     void getToy(const std::shared_ptr<Toy>& toy) {
         if (lovelyToy == toy) {
